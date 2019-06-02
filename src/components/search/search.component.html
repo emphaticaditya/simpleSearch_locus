@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="search_wrapper">
+    <label>Enter keywords to search</label>
+    <div class="wrap">
+        <input type="text" #searchInput [(ngModel)]="searchKeyword" (ngModelChange)="getInfo($event)" placeholder="Search users by ID, address, name, items, pincode">
+        <ul>
+          <li *ngFor="let searchResult of searchResults; let i = index" [hidden]="noItemsFound" [ngClass]="{'active': i==currentIndex}" class="listItem">
+            <div class="list_wrap">
+              <span>{{searchResult.id | titlecase}}</span>
+              <hr *ngIf="foundInItems">
+              <p *ngIf="foundInItems" class="item_found">"{{searchKeyword | titlecase}}" found in items</p>
+              <hr *ngIf="foundInItems"> 
+              <p><i>{{searchResult.name | titlecase}}</i></p>
+              <p>{{searchResult.address | titlecase}}</p>
+            </div>
+          </li>
+          <li [hidden]="!noItemsFound">
+            <p>No User found</p>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>

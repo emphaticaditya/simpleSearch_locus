@@ -1,0 +1,69 @@
+.search_wrapper{
+    text-align: center;
+    margin-top: 5%;
+}
+.search_wrapper label{
+    text-transform: capitalize;
+}
+
+.wrap{
+    position: relative;
+}
+
+.wrap input {
+    width: 40%;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.wrap input:focus{
+    outline-color: #fff !important;
+}
+
+.wrap ul {
+    list-style: none;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 40%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    position: absolute;
+    left: 30%;
+    top: 41px;
+    border-top: 0;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.wrap ul li{
+    border-bottom: 1px solid #ececec;
+    padding: 10px;
+}
+
+.wrap ul li:hover{
+    background-color: #fefddc;
+    cursor: pointer;
+}
+
+.wrap .list_wrap span{
+    font-weight: 600;
+}
+.wrap .list_wrap p{
+    margin: 0;
+}
+
+.wrap .list_wrap hr{
+    margin: 0.5rem;
+}
+
+.wrap .list_wrap .item_found{
+    font-size: 0.9rem;
+    color: #686565;
+}
+
+.wrap ul .listItem.active{
+    background-color: #fefddc;
+}
